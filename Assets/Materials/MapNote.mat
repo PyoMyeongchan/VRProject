@@ -63,7 +63,7 @@ Material:
     - _DissolveEdgeThinkness: 0
     - _EdgeThinkness: 0.02
     - _Matallic: 1
-    - _NoiseScale: 40
+    - _NoiseScale: 30
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 1
