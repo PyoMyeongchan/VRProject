@@ -14,6 +14,18 @@ public class LevelManager : MonoBehaviour
     private int[] _unitIndices;
     private float _currentScrollZ;
 
+    private void Awake()
+    {
+        if (GameManager.gameSession != null)
+        {
+            GameManager.gameSession.playSpeed = _speed;
+        }
+        else
+        {
+            Debug.LogWarning("GameSession is null. Make sure GameManager is initialized first.");
+        }
+    }
+
     private void Start()
     {
         _mapUnits = new Transform[_initSpawnCount];
@@ -28,6 +40,7 @@ public class LevelManager : MonoBehaviour
             float z = _baseZOffset + _unitIndices[i] * _mapUnitLengthz;
             _mapUnits[i].localPosition = new Vector3(0, 0, z);
         }
+        
     }
 
     private void Update()

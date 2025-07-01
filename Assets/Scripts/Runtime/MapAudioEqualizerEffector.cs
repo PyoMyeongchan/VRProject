@@ -10,7 +10,8 @@ public class MapAudioEqualizerEffector : MonoBehaviour
     [SerializeField, Range(64, 512)] private int _spawnCount = 128;
     [SerializeField] private float _scaleYMax = 4f;
     [SerializeField] private float _gamma = 2f;
-
+    [SerializeField] private bool _doShuffle = true;
+    
     private AudioSource _audioSource;
     private Transform[] _spawnedUnits;
     private float[] _spectrumData;
@@ -31,6 +32,11 @@ public class MapAudioEqualizerEffector : MonoBehaviour
     private void Update()
     {
         _audioSource.GetSpectrumData(_spectrumData, 0, FFTWindow.Hamming);
+
+        if (_doShuffle)
+        {
+            _spectrumData.Shuffle();
+        }
 
         _spectrumData[0] = _spectrumData[_spawnCount - 1] = 0f;
         _spawnedUnits[0].localScale = _spawnedUnits[_spawnCount - 1].localScale = new Vector3(1f, 0.1f, 1f);

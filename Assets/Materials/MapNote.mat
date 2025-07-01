@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MapUnit
-  m_Shader: {fileID: -6465566751694194690, guid: 180bb83212840624fbad9a228d73a61c, type: 3}
+  m_Name: MapNote
+  m_Shader: {fileID: -6465566751694194690, guid: e16e050988f6462429343d61a3cc13d8, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -59,12 +59,19 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Dissolve: 0
+    - _DissolveEdgeThinkness: 0
+    - _EdgeThinkness: 0.02
+    - _Matallic: 1
+    - _NoiseScale: 40
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Smoothness: 1
     m_Colors:
     - _CameraOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.18903525, g: 0.36338812, b: 0.8156863, a: 0}
+    - _Color: {r: 0, g: 0.06124808, b: 0.5188679, a: 0}
     - _Curve: {r: 0, g: 0, b: 0, a: 0}
-    - _Emission: {r: 0.0007314644, g: 0.00072801416, b: 0.00072801416, a: 0}
+    - _DissolveEdgeColor: {r: 0, g: 71.69625, b: 743.8491, a: 0}
+    - _Emission: {r: 0, g: 72.57851, b: 68.41461, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
