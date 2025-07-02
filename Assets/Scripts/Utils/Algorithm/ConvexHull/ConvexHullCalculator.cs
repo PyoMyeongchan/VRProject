@@ -3,7 +3,7 @@ using System.Linq;
 
 public static class ConvexHullCalculator
 {
-    static List<Point2DMapping> MonotoneChain(List<Point2DMapping> points)
+    public static List<Point2DMapping> MonotoneChain(List<Point2DMapping> points)
     {
         points.Sort((p1, p2) =>
         {
