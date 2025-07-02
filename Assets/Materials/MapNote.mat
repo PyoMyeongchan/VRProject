@@ -69,9 +69,9 @@ Material:
     - _Smoothness: 1
     m_Colors:
     - _CameraOffset: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0, g: 0.06124808, b: 0.5188679, a: 0}
+    - _Color: {r: 0, g: 0.13363658, b: 0.5176471, a: 0}
     - _Curve: {r: 0, g: 0, b: 0, a: 0}
-    - _DissolveEdgeColor: {r: 0, g: 71.69625, b: 743.8491, a: 0}
-    - _Emission: {r: 0, g: 72.57851, b: 68.41461, a: 0}
+    - _DissolveEdgeColor: {r: 0, g: 8.622073, b: 89.45407, a: 0}
+    - _Emission: {r: 47.937256, g: 0, b: 32.01243, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
