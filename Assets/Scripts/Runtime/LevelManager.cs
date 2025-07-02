@@ -1,10 +1,12 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    [Header("Map Settings")]
-    [SerializeField] private GameObject _mapUnitPrefab;
+    [Header("Map Settings")] [SerializeField]
+    private GameObject _mapUnitPrefab;
+
     [SerializeField] private int _initSpawnCount = 20;
     [SerializeField] private float _mapUnitLengthz = 2f;
     [SerializeField] private float _baseZOffset = -10f;
@@ -14,11 +16,16 @@ public class LevelManager : MonoBehaviour
     private int[] _unitIndices;
     private float _currentScrollZ;
 
+    private AudioSource _audioSource;
+
     private void Awake()
     {
+        _audioSource = GetComponent<AudioSource>();
         if (GameManager.gameSession != null)
         {
             GameManager.gameSession.playSpeed = _speed;
+            _audioSource.clip = GameManager.gameSession.selectedSongSpec.audioClip;
+
         }
         else
         {
@@ -36,11 +43,11 @@ public class LevelManager : MonoBehaviour
             GameObject mapUnit = Instantiate(_mapUnitPrefab, transform);
             _mapUnits[i] = mapUnit.transform;
             _unitIndices[i] = i;
-            
+
             float z = _baseZOffset + _unitIndices[i] * _mapUnitLengthz;
             _mapUnits[i].localPosition = new Vector3(0, 0, z);
         }
-        
+
     }
 
     private void Update()
@@ -61,4 +68,10 @@ public class LevelManager : MonoBehaviour
             _mapUnits[i].localPosition = new Vector3(0, 0, z);
         }
     }
+
+    public void Return()
+    {
+        SceneManager.LoadScene(0);
+    }
+
 }

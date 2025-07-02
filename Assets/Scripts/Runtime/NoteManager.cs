@@ -39,6 +39,11 @@ public class NoteManager : MonoBehaviour
         StartCoroutine(C_MoveNotes());
     }
 
+    public bool TryHit(Transform note)
+    {
+        return _noteTable.Remove(note);
+    }
+
     IEnumerator C_PlayAudio()
     {
         yield return new WaitForSeconds(_spawnDelay);
