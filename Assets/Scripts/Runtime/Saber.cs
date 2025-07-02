@@ -12,7 +12,8 @@ public class Saber : MonoBehaviour
             return;
         }
         
-        
+        SoundManager.instance.PlaySFX(SFXType.DrumSound);
+        SoundManager.instance.PlaySFX(SFXType.SlashSound);
         
     }
 }

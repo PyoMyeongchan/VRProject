@@ -11,7 +11,7 @@ public enum BGMType
 
 public enum SFXType
 { 
-    DrumSound, SlashSound
+    DrumSound, SlashSound, DestroySound
 }
 
 /// <summary>

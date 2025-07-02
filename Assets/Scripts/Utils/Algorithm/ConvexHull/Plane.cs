@@ -9,7 +9,7 @@ public struct Plane
     /// <param name="point">평면 위의 임의의 점</param>
     public Plane(Vector3 normal, Vector3 point)
     {
-        this.normal = normal;
+        this.normal = normal.normalized;
         distance = -Vector3.Dot(normal, point);
     }
 

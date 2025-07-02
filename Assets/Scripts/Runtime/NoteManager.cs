@@ -94,7 +94,10 @@ public class NoteManager : MonoBehaviour
                 {
                     Renderer renderer = notePair.Key.GetComponent<Renderer>();
                     _dissolveAnimation.PlayC_Dissolve(renderer,
-                                        () => Destroy(renderer.gameObject));
+                        () => {
+                            Destroy(renderer.gameObject);
+                            SoundManager.instance.PlaySFX(SFXType.DestroySound);
+                        });
                     _cachedDeadNotes.Add(notePair.Key);
                 }
             }

@@ -61,7 +61,7 @@ Material:
     m_Floats:
     - _Dissolve: 0
     - _DissolveEdgeThinkness: 0
-    - _EdgeThinkness: 0.02
+    - _EdgeThinkness: 0.04
     - _Matallic: 1
     - _NoiseScale: 30
     - _QueueControl: 0
