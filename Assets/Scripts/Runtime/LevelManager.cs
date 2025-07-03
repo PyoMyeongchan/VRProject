@@ -68,10 +68,4 @@ public class LevelManager : MonoBehaviour
             _mapUnits[i].localPosition = new Vector3(0, 0, z);
         }
     }
-
-    public void Return()
-    {
-        SceneManager.LoadScene(0);
-    }
-
 }
